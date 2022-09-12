@@ -193,6 +193,16 @@ class DoctorController extends Controller
                 ]
             );
         }
-        
+    }
+
+    public function daftar_dokter(Request $request)
+    {
+        $data = Doctor::get();
+        return view('page.doctor.doctor_list',compact('data'));
+    }
+
+    public function daftar_berita(Request $request)
+    {
+        return view('page.news.news_list');
     }
 }

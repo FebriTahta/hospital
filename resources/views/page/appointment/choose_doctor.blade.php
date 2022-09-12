@@ -64,7 +64,7 @@
                             <div class="row">
                                 <div class="form-group col-md-4 col-4" style="text-align: center">
                                     <div class=" text-center " style="background-color: rgb(163, 236, 196); text-align: justify; border-radius: 5px">
-                                        <label  id="start" style="text-align: center; margin-top: 10px" disabled>09.30am</label>
+                                        <label  id="start" style="text-align: center; margin-top: 10px" disabled>--</label>
                                     </div>
                                 </div>
                                 <div class="form-group col-md-4 col-4">
@@ -74,7 +74,7 @@
                                 </div>
                                 <div class="form-group col-md-4 col-4">
                                     <div class="text-center " style="background-color: rgb(163, 236, 196); text-align: justify; border-radius: 5px">
-                                        <label for="radio1" style="text-align: center; margin-top: 10px" id="end" disabled>09.30am</label>
+                                        <label for="radio1" style="text-align: center; margin-top: 10px" id="end" disabled>--</label>
                                     </div>
                                 </div>
                             </div>
@@ -128,6 +128,7 @@
                                     <input type="hidden" name="doctor_id" id="doctor_id" value="{{ $dokter->id }}" required>
                                     <input type="hidden" name="cabang_id" id="cabang_id" value="{{ $dokter->cabang_id }}" required>
                                     <input type="hidden" name="spesialis_id" id="spesialis_id" value="{{ $dokter->spesialis_id }}" required>
+                                    <input type="hidden" id="dokter_id" value="{{ $dokter->id }}">
                                     <input type="hidden" name="tanggals" id="tanggals" required>
                                     <input type="number" class="form-control" required name="nik_pasien"  placeholder="NIK..." required>
                                 </div>
@@ -227,6 +228,7 @@
                 success: function(response) {
                     $('#start').html(response.start);
                     $('#end').html(response.end);
+                    console.log(response);
                 }
             });
         });

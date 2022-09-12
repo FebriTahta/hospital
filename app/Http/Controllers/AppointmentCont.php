@@ -111,9 +111,12 @@ class AppointmentCont extends Controller
             $jadwal1 = strtolower(\Carbon\Carbon::parse($date)->format('l'));
             $jadwal2 = Jadwal::where('hari_en', $jadwal1)->first();
 
-            $data = Doctor::where('id',$doctor_id)->with('jadwal',function($q) use ($jadwal1) {
+            $data    = Doctor::where('id', $doctor_id)->with('jadwal', function($q) use($jadwal1){
                 $q->where('hari_en', $jadwal1);
             })->first();
+            // $data = Doctor::where('id',$doctor_id)->with('jadwal',function($q) use ($jadwal1) {
+            //     $q->where('hari_en', $jadwal1);
+            // })->first();
             $hari_start = [];
             $hari_end = [];
             foreach ($data->jadwal as $key => $value) {

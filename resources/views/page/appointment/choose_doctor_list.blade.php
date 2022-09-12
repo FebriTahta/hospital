@@ -29,7 +29,32 @@
                 display: none;
             }
         }
+        .alert {
+          padding: 20px;
+          background-color: #f44336;
+          color: white;
+        }
         
+        .alertok {
+          padding: 20px;
+          background-color: #8CC0DE;
+          color: white;
+        }
+        
+        .closebtn {
+          margin-left: 15px;
+          color: white;
+          font-weight: bold;
+          float: right;
+          font-size: 22px;
+          line-height: 20px;
+          cursor: pointer;
+          transition: 0.3s;
+        }
+        
+        .closebtn:hover {
+          color: black;
+        }
 </style>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css" integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ==" crossorigin="">
 <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js" integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ==" crossorigin=""></script>
@@ -56,6 +81,18 @@
     <div class="container margin_60" id="payment">
         <div class="row">
             <div class="col-lg-8" style="margin-bottom: 20px">
+                @if($dokter->count() > 0)
+                <div class="alertok" style="margin-bottom:20px">
+                  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+                  Menampilkan <strong>{{$dokter->count()}} Jadwal dokter spesialis yang sesuai dengan pencarian anda</strong> 
+                </div>
+                @else
+                <div class="alert">
+                  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+                  <strong>Maff!</strong> Jadwal Dokter Spesialis Pada Rumah Sakit Tersebut Kosong. Silahkan Pilih Jadwal Lain
+                </div>
+                @endif
+
                 @foreach ($dokter as $key => $item)
                 <div class="strip_list wow fadeIn animated" style="margin-bottom:0; ;visibility: visible; animation-name: fadeIn; border-bottom-left-radius: 0; border-bottom-right-radius: 0">
                     <figure>
@@ -78,7 +115,7 @@
                             <thead style="background-color: rgb(103, 199, 162);">
                                 <tr style="color: white">
                                     <th>Hari yang tersedia</th>
-                                    <th>Price</th>
+                                    <th>Jadwal</th>
                                 </tr>
                             </thead>
                             <tbody>

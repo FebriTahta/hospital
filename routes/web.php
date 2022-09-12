@@ -8,6 +8,7 @@ use App\Http\Controllers\DoctorController;
 use App\Http\Controllers\JadwalController;
 // cont for fe controller for be
 use App\Http\Controllers\AppointmentCont;
+use App\Http\Controllers\LandingCont;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,6 +24,7 @@ use App\Http\Controllers\AppointmentCont;
 Route::get('/', function () {
     // return view('welcome');
     return redirect('/appointment/choose-specialist-&-hospital');
+    // return redirect('/home-page');
 });
 
 Route::get('/admin-dashboard', function() {
@@ -62,6 +64,9 @@ Route::controller(JadwalController::class)->group(function(){
 
 
 
+
+
+
 Route::get('/appointment/choose-specialist-&-hospital',[AppointmentCont::class,'choose_specialist']);
 Route::get('/appointment/choose-doctor/{id_dokter}',[AppointmentCont::class,'choose_doctor']);
 Route::get('/map-cabang',[AppointmentCont::class,'map_cabang']);
@@ -73,3 +78,12 @@ Route::post('/appointment/booking-jadwal',[AppointmentCont::class,'booking_jadwa
 Route::get('/appointment/status-booking/{pasien_id}',[AppointmentCont::class,'status_booking']);
 Route::post('/appointment/cek-data-pasien',[AppointmentCont::class,'cek_data_pasien']);
 
+
+Route::controller(LandingCont::class)->group(function(){
+    Route::get('/home-page', [LandingCont::class,'home_page']);
+});
+
+Route::controller(DoctorController::class)->group(function(){
+    Route::get('/doctor-list','daftar_dokter');
+    Route::get('/news-list','daftar_berita');
+});

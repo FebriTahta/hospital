@@ -70,7 +70,7 @@
 			<div class="row">
 				<div class="col-lg-3 col-6">
 					<div id="logo">
-						<a href="/appointment/choose-specialist-&-hospital" title="Findoctor"><img src="{{ asset('fe1/img/logo.png') }}" alt="" width="163" height="36"></a>
+						<a href="/home-page" title="Findoctor"><img src="{{ asset('fe1/img/logo.png') }}" alt="" width="163" height="36"></a>
 					</div>
 				</div>
 				<nav class="col-lg-9 col-6">
@@ -85,8 +85,10 @@
 					</ul> --}}
 					<div class="main-menu">
 						<ul>
-							<li><a href="#">Home</a></li>
+							<li><a href="/home-page">Home</a></li>
 							<li><a href="/appointment/choose-specialist-&-hospital">Buat Janji</a></li>
+							<li><a href="/doctor-list">Daftar Dokter</a></li>
+							<li><a href="/news-list">Daftar Berita</a></li>
 							{{-- <li><a href="/appointment/choose-doctor">Berita</a></li>
 							<li class="submenu">
 								<a href="#0" class="show-submenu">Pages<i class="icon-down-open-mini"></i></a>
