@@ -68,7 +68,8 @@
                                 </div>
                                 <hr>
                                 <div class="step">
-                                    <form action="/appointment/choose-specialist-&-hospital/result" method="POST"> <input type="hidden" name="_token" value="sAtfuwBUrl0HNV3AbTb9bqNW0AYi0cT2CN9ezm5x">                        <div class="row">
+                                    <form action="/appointment/choose-specialist-&-hospital/result" method="POST"> @csrf
+                                        <div class="row">
                                             <div class="col-md-6 col-sm-6">
                                                 <div class="form-group">
                                                     <label>Hari</label>
