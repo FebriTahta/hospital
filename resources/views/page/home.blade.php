@@ -144,7 +144,7 @@
                                                 <h5 style="line-height: 22px">Anda butuh layanan kesehatan dari rumah ? atau ingin membuat janji temu dan konsultasi dengan dokter kepercayaan anda ?</h5>
                                             </div>
                                             <div class="h-decor" style="margin-bottom: 42px"></div>
-                                            <div class="" style="text-align: center; max-width: 100%"><a style="line-height: 5px; width: 100%" href="blog-post-page.html" class="btn btn-sm btn-hover-fill"><i class="icon-right-arrow"></i><span>Make Appointment</span><i class="icon-right-arrow"></i></a></div>
+                                            <div class="" style="text-align: center; max-width: 100%"><a style="line-height: 5px; width: 100%" href="/appointment/choose-specialist-&-hospital" class="btn btn-sm btn-hover-fill"><i class="icon-right-arrow"></i><span>Make Appointment</span><i class="icon-right-arrow"></i></a></div>
                                         </div>
                                     </div>
                                 </div>
