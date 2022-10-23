@@ -11,7 +11,7 @@
 	<title style="text-transform: capitalize">RS. Permata Bunda</title>
     <meta property="og:title" content="Layanan Rumah Sakit Permata Bunda" style="text-transform: capitalize" />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="{{ asset('xxx.jpg') }}" />
+    <meta property="og:image" content="{{ asset('xxx.jpeg') }}" />
     <meta property="og:description" content="Kami berkomitmen untuk mewujudkan indonesia sehat dan berkarakter" />
     <meta property="og:url" content="https://hopital.coffinashop.com" />
     <meta name="theme-color" content="#8CC0DE">
