@@ -140,10 +140,11 @@
                                 </div>
                                 <hr>
                                 <div class="step">
-                                    <form action="/appointment/choose-specialist-&amp;-hospital/result" method="POST"> <input type="hidden" name="_token" value="sAtfuwBUrl0HNV3AbTb9bqNW0AYi0cT2CN9ezm5x">                        <div class="row">
+                                    <form action="/appointment/choose-specialist-&-hospital/result" method="POST"> @csrf
+                                        <div class="row">
                                             <div class="col-md-6 col-sm-6">
                                                 <div class="form-group">
-                                                    <label>Hari</label>
+                                                    {{-- <label>Hari</label> --}}
                                                     <select name="hari" class="form-control" id="hari" required="">
                                                         <option value="">Tentukan hari</option>
                                                         <option value="0">Minggu</option>
@@ -158,7 +159,7 @@
                                             </div>
                                             <div class="col-md-6 col-sm-6">
                                                 <div class="form-group">
-                                                    <label>Rumah Sakit</label>
+                                                    {{-- <label>Rumah Sakit</label> --}}
                                                     <select name="cabang_id" class="form-control" id="cabang_id" required="">
                                                             <option value="">Tentukan Rumah Sakit</option>
                                                             @foreach ($cabang as $item)
@@ -169,7 +170,7 @@
                                             </div>
                                             <div class="col-md-12 col-sm-12">
                                                 <div class="form-group">
-                                                    <label>Spesialis</label>
+                                                    {{-- <label>Spesialis</label> --}}
                                                     <div class="row">
                                                         <div class="col-md-6" style="margin-bottom: 10px">
                                                             <select name="spesialis_id" class="form-control" id="spesialis_id" required="">
