@@ -123,20 +123,20 @@
                 <div class="col-lg-8 mt-4 mt-lg-0">
                     <div class="slider-gallery">
                         <ul class="slider-gallery-main list-unstyled js-slider-gallery-main">
-                            <li><img src="{{ asset('foto_example/IMG_5808.jpg') }}" alt=""></li>
-                            <li><img src="{{ asset('foto_example/IMG_4692.jpg') }}" alt=""></li>
-                            <li><img src="{{ asset('foto_example/IMG_4684.jpg') }}" alt=""></li>
-                            <li><img src="{{ asset('foto_example/IMG_4681.jpg') }}" alt=""></li>
-                            <li><img src="{{ asset('foto_example/IMG_4677.jpg') }}" alt=""></li>
-                            <li><img src="{{ asset('foto_example/IMG_4667.jpg') }}" alt=""></li>
+                            <li><img src="{{ asset('foto_example/5808.JPG') }}" alt=""></li>
+                            <li><img src="{{ asset('foto_example/4692.JPG') }}" alt=""></li>
+                            <li><img src="{{ asset('foto_example/4684.JPG') }}" alt=""></li>
+                            <li><img src="{{ asset('foto_example/4681.JPG') }}" alt=""></li>
+                            <li><img src="{{ asset('foto_example/4677.JPG') }}" alt=""></li>
+                            <li><img src="{{ asset('foto_example/4667.JPG') }}" alt=""></li>
                         </ul>
                         <ul class="slider-gallery-thumbs list-unstyled js-slider-gallery-thumbs">
-                            <li><img src="{{ asset('foto_example/IMG_5808.jpg') }}" alt=""></li>
-                            <li><img src="{{ asset('foto_example/IMG_4692.jpg') }}" alt=""></li>
-                            <li><img src="{{ asset('foto_example/IMG_4684.jpg') }}" alt=""></li>
-                            <li><img src="{{ asset('foto_example/IMG_4681.jpg') }}" alt=""></li>
-                            <li><img src="{{ asset('foto_example/IMG_4677.jpg') }}" alt=""></li>
-                            <li><img src="{{ asset('foto_example/IMG_4667.jpg') }}" alt=""></li>
+                            <li><img src="{{ asset('foto_example/5808.JPG') }}" alt=""></li>
+                            <li><img src="{{ asset('foto_example/4692.JPG') }}" alt=""></li>
+                            <li><img src="{{ asset('foto_example/4684.JPG') }}" alt=""></li>
+                            <li><img src="{{ asset('foto_example/4681.JPG') }}" alt=""></li>
+                            <li><img src="{{ asset('foto_example/4677.JPG') }}" alt=""></li>
+                            <li><img src="{{ asset('foto_example/4667.JPG') }}" alt=""></li>
                         </ul>
                     </div>
                 </div>

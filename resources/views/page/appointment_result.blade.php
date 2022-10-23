@@ -76,18 +76,18 @@
                 <div class="col-md-5">
                     <div class="product-block-gallery">
                         <div class="product-previews" id="productPreviews">
-                            <a href="#" class="product-previews-item active" data-image="{{ asset('foto_example/IMG_5808.jpg') }}" data-zoom-image="{{ asset('foto_example/IMG_5808.jpg') }}">
-                                <img src="{{ asset('foto_example/IMG_5808.jpg') }}" />
+                            <a href="#" class="product-previews-item active" data-image="{{ asset('foto_example/5808.JPG') }}" data-zoom-image="{{ asset('foto_example/5808.JPG') }}">
+                                <img src="{{ asset('foto_example/5808.JPG') }}" />
                             </a>
-                            <a href="#" class="product-previews-item" data-image="{{ asset('foto_example/IMG_4677.jpg') }}" data-zoom-image="{{ asset('foto_example/IMG_4677.jpg') }}">
-                                <img src="{{ asset('foto_example/IMG_4677.jpg') }}" />
+                            <a href="#" class="product-previews-item" data-image="{{ asset('foto_example/4677.JPG') }}" data-zoom-image="{{ asset('foto_example/4677.JPG') }}">
+                                <img src="{{ asset('foto_example/4677.JPG') }}" />
                             </a>
-                            <a href="#" class="product-previews-item" data-image="{{ asset('foto_example/IMG_4667.jpg') }}" data-zoom-image="{{ asset('foto_example/IMG_4667.jpg') }}">
-                                <img src="{{ asset('foto_example/IMG_4667.jpg') }}" />
+                            <a href="#" class="product-previews-item" data-image="{{ asset('foto_example/4667.JPG') }}" data-zoom-image="{{ asset('foto_example/4667.JPG') }}">
+                                <img src="{{ asset('foto_example/4667.JPG') }}" />
                             </a>
                         </div>
                         <div class="product-block-mainimage">
-                            <img id="mainImage" src="{{ asset('foto_example/IMG_4667.jpg') }}" data-zoom-image="{{ asset('foto_example/IMG_4667.jpg') }}" />
+                            <img id="mainImage" src="{{ asset('foto_example/4667.JPG') }}" data-zoom-image="{{ asset('foto_example/4667.JPG') }}" />
                         </div>
                     </div>
                 </div>

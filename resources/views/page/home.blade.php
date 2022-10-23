@@ -162,7 +162,7 @@
                 <div class="col-md-7 col-lg-6">
                     <div class="services-wrap1 float-right">
                         <div class="service-tab-banner d-md-none">
-                            <img src="{{ asset('foto_example/8.jpg') }}" alt="">
+                            <img src="{{ asset('foto_example/8.JPG') }}" alt="">
                         </div>
                         <div class="title-wrap text-center text-sm-left mt-2 mt-md-0">
                             <h2 class="h1">Daftar <span class="theme-color">Layanan</span></h2>
