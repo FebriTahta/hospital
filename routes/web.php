@@ -23,8 +23,8 @@ use App\Http\Controllers\LandingCont;
 
 Route::get('/', function () {
     // return view('welcome');
-    return redirect('/appointment/choose-specialist-&-hospital');
-    // return redirect('/home-page');
+    // return redirect('/appointment/choose-specialist-&-hospital');
+    return redirect('/home-page');
 });
 
 Route::get('/admin-dashboard', function() {
@@ -77,10 +77,14 @@ Route::get('/appointment/search-schedule/{doctor_id}/{tahun}/{bulan}/{tanggal}',
 Route::post('/appointment/booking-jadwal',[AppointmentCont::class,'booking_jadwal']);
 Route::get('/appointment/status-booking/{pasien_id}',[AppointmentCont::class,'status_booking']);
 Route::post('/appointment/cek-data-pasien',[AppointmentCont::class,'cek_data_pasien']);
+Route::get('/schedule',[AppointmentCont::class,'schedule']);
 
 
 Route::controller(LandingCont::class)->group(function(){
     Route::get('/home-page', [LandingCont::class,'home_page']);
+    Route::get('/profile-page',[LandingCont::class,'profile_page']);
+    Route::get('/service-page',[LandingCont::class,'service_page']);
+    Route::get('/doctor-page',[LandingCont::class,'doctor_page']);
 });
 
 Route::controller(DoctorController::class)->group(function(){

@@ -27,13 +27,13 @@
     
     <!-- GOOGLE WEB FONT -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
+	<link href="{{ asset('fe1/css/icon_fonts/css/all_icons_min.css') }}" rel="stylesheet">
 	<!-- BASE CSS -->
 	<link href="{{ asset('fe1/css/bootstrap.min.css') }}" rel="stylesheet">
 	<link href="{{ asset('fe1/css/style.css') }}" rel="stylesheet">
 	<link href="{{ asset('fe1/css/menu.css') }}" rel="stylesheet">
 	<link href="{{ asset('fe1/css/vendors.css') }}" rel="stylesheet">
-	<link href="{{ asset('fe1/css/icon_fonts/css/all_icons_min.css') }}" rel="stylesheet">
+	
    
     <!-- SPECIFIC CSS -->
     <link href="{{ asset('fe1/css/date_picker.css') }}" rel="stylesheet">

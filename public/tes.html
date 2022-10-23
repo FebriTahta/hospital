@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+ 
+<head>
+    <title>DateTimepicker</title>
+ 
+    <!-- Include Bootstrap CDN -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/css/bootstrap-datepicker.standalone.min.css" rel="stylesheet"/>
+    <style>
+        .datepicker table tr td.disabled, .datepicker table tr td.disabled:hover {
+            background: 0 0;
+            color: #999;
+            cursor: default;
+            background-color: red;
+        }
+
+        .datepicker,
+        .table-condensed {
+        width: 500px;
+        height:500px;
+        }
+    </style>
+</head>
+ 
+<body>
+ 
+    <!-- Include datetime input to display
+        datetimepicker in container with
+        relative position -->
+    <div class="container" style="margin:100px">
+        <div style="position: relative">
+ 
+            <!-- Include input field with id so
+                that we can use it in JavaScript
+                to set attributes.-->
+            <!-- <input class="form-control"
+                type="text" id="datetime" /> -->
+                <div style="width: 500px;" id="datetime"></div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/locales/bootstrap-datepicker.nl.min.js"></script>
+    <script>
+ 
+        // Below code sets format to the
+        // datetimepicker having id as
+        // datetime
+        $('#datetime').datepicker({
+            // calendarWeeks: true, 
+            todayHighlight: true,
+            daysOfWeekDisabled: [1,2],
+            weekStart: 1,
+            format: "yyyy-mm-dd",
+            datesDisabled: ["2017/10/20", "2017/11/21", "2017/12/21", "2018/01/21", "2018/02/21"],
+        });
+    </script>
+</body>
+ 
+</html>

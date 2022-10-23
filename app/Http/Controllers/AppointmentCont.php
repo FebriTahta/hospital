@@ -34,14 +34,18 @@ class AppointmentCont extends Controller
         }
         $jadwal_hari2 = implode(',',$hari_vl2);
         // return $hari2;
-        return view('page.appointment.choose_doctor',compact('dokter','jadwal_hari','jadwal_hari2'));
+
+        // return view('page.appointment.choose_doctor',compact('dokter','jadwal_hari','jadwal_hari2'));
+        return view('page.doctor_appointment',compact('dokter','jadwal_hari','jadwal_hari2'));
     }
 
     public function choose_specialist()
     {
         $cabang = Cabang::get();
         $spesialis = Spesialis::get();
-        return view('page.appointment.choose_specialist',compact('cabang','spesialis'));
+
+        // return view('page.appointment.choose_specialist',compact('cabang','spesialis'));
+        return view('page.appointment',compact('spesialis','cabang'));
     }
 
     public function map_cabang(Request $request)
@@ -77,7 +81,10 @@ class AppointmentCont extends Controller
                             $query->whereIn('hari_vl', $hari_array);
                         })
                         ->get();
-        return view('page.appointment.choose_doctor_list',compact('dokter'));
+        $cabang = Cabang::all();
+        $spesialis = Spesialis::all();
+        // return view('page.appointment.choose_doctor_list',compact('dokter'));
+        return view('page.appointment_result',compact('dokter','cabang','spesialis'));
     }
 
     public function choose_doctor_result(Request $request)
@@ -269,5 +276,11 @@ class AppointmentCont extends Controller
                 'message'  => 'Anda Belum Terdaftar silahkan isi form berikut terlebih dahulu',
             ]);
         }
+    }
+
+    public function schedule()
+    {
+        $dokter = Doctor::with('jadwal')->get();
+        return view('page.schedule',compact('dokter'));
     }
 }

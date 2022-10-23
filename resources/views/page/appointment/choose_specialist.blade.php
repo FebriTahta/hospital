@@ -167,7 +167,7 @@
                         </div>
                         <div class="summary">
                             {{-- <div id="map"></div> --}}
-                            <div id="map" style="width: 600px; height: 400px; position: relative; outline: none;" class="leaflet-container "></div>
+                            {{-- <div id="map" style="width: 600px; height: 400px; position: relative; outline: none;" class="leaflet-container "></div> --}}
                         </div>
                         
                         <hr>
@@ -193,28 +193,28 @@
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 
     <script>
-    var map = L.map('map').setView([-6.3005585, 106.913321], 11);
-    var tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-		maxZoom: 19,
-		attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-	}).addTo(map);
+    // var map = L.map('map').setView([-6.3005585, 106.913321], 11);
+    // var tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+	// 	maxZoom: 19,
+	// 	attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+	// }).addTo(map);
     // GET DATA CABANG
-        $.ajax({
-            type: "GET",
-            headers: {
-                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-            },
-            url: "/map-cabang",
-            // data: rage,
-            dataType: "JSON",
-            success: function(response) {
-                $.each( response.maps_cabang, function( key, value ) {
-                    var marker = L.marker([value.longitude,value.latitude]).addTo(map)
-                    .bindPopup('<b>'+value.nama_cabang+'</b> <br />Alamat : '+value.alamat_cabang+' <br /> Telp : '+value.telp_cabang+'').openPopup();
-                    // console.log(value);
-                });
-            }
-        });
+        // $.ajax({
+        //     type: "GET",
+        //     headers: {
+        //         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        //     },
+        //     url: "/map-cabang",
+        //     // data: rage,
+        //     dataType: "JSON",
+        //     success: function(response) {
+        //         $.each( response.maps_cabang, function( key, value ) {
+        //             var marker = L.marker([value.longitude,value.latitude]).addTo(map)
+        //             .bindPopup('<b>'+value.nama_cabang+'</b> <br />Alamat : '+value.alamat_cabang+' <br /> Telp : '+value.telp_cabang+'').openPopup();
+        //             // console.log(value);
+        //         });
+        //     }
+        // });
 
         $('#dokter').select2({
             width: 'resolve',
