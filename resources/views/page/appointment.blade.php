@@ -241,9 +241,9 @@
                 document.getElementById('find_dokter').style.display = "";
                 $.ajax({
                     type: "GET",
-                    headers: {
-                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                    },
+                    // headers: {
+                    //     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    // },
                     url: "/appointment/doctor/find-doctor/" + dokter_id,
                     // data: rage,
                     dataType: "JSON",
